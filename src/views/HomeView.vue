@@ -14,9 +14,12 @@
           <Suspense>
             <CityList> </CityList>
             <template #fallback>
-              <div v-if="cityCout.length !== 0" class="gap-4 flex flex-col">
+              <!-- <div v-if="cityCout.length !== 0" class="gap-4 flex flex-col">
                 <CityCardSkeleton v-for=" i in cityCout" :key="i" />
-            </div>
+             </div> -->
+
+             <CityCardSkeleton />
+
             </template>
           </Suspense>
         </div>
@@ -53,14 +56,14 @@
       }, 300);
   }
 
-  const cityCout = ref([]);
+  // const cityCout = ref([]);
 
-  const countCity = () => {
-    cityCout.value = JSON.parse(localStorage.getItem('savedCities'));
-    console.log(cityCout.value.length)
-  }
+  // const countCity = () => {
+  //   cityCout.value = JSON.parse(localStorage.getItem('savedCities'));
+  //   console.log(cityCout.value.length)
+  // }
 
-  countCity()
+  // countCity()
 
  
   const previewCity = (searchResult) =>  {
