@@ -4,7 +4,7 @@ import CityView from '@/views/CityView.vue'
 import Test from '@/components/Test.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
