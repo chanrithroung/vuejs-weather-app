@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import CityView from '@/views/CityView.vue'
+import Test from '@/components/Test.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,7 +21,15 @@ const router = createRouter({
       meta: {
         title: "Weather"
       }
-    }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test,
+      meta: { 
+        title: "Test"
+      }
+    },
   ],
 })
 
